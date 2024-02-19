@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SwachaBaaa - Space Debris Cleanup Startup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .nav {
+            background-color: #2ecc71;
+            padding: 20px;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .section {
+            background-color: #ecf0f1;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .footer {
+            background-color: #34495e;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .shooting-star {
+            position: absolute;
+            width: 20px;
+            height: 1px;
+            background-color: #fff;
+            box-shadow: 0 0 10px #fff;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to SwachaBaaa</h1>
+        <p>We are a group of students from BHEL.MATRIC.HR.SEC.SCHOOL, working to clean space debris for our nation's development.</p>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li><a href="#detailed-plan">Our Detailed Plan</a></li>
+            <li><a href="#space-debris-statistics">Space Debris Statistics</a></li>
+            <li><a href="#collaboration">Collaboration with Organizations</a></li>
+            <li><a href="#team">Meet Our Team</a></li>
+        </ul>
+    </nav>
+    
+    <section id="detailed-plan" class="section">
+        <h2>Our Detailed Plan</h2>
+        <p>We are a team of dedicated students working on innovative technologies to clean up space debris. Our plan includes:</p>
+        <ul>
+            <li>Utilizing advanced spectroscopy techniques, such as APXS, to identify element composition in space debris.</li>
+            <li>Pioneering cold welding techniques for material joining in the harsh conditions of space.</li>
+            <li>Developing robotic systems for precise and safe space debris removal.</li>
+        </ul>
+    </section>
+    <section id="technology" class="section">
+    <h2>Alpha Particle X-Ray Spectrometry</h2>
+    <p>We have planned to use Alpha Particle X-ray  Spectrometry in our projet in order to analyse the elemental composition of the debris,which have been successful in Chandrayaan 3 Mission and find the possibility whether the process of cold welding can be used there in order to weld the debris together to reduce the amount of energy to bring back them to the earth's surface</p>
+    </section>
+    
+    <section id="space-debris-statistics" class="section">
+        <h2>Space Debris Statistics</h2>
+        <p>Here are some key statistics regarding space debris from 1960 - 2023:</p>
+        <ul>
+            <li>Total number of objects in orbit: 9,000+</li>
+            <li>Large objects (>10 cm): 3,000+</li>
+            <li>Medium objects (1-10 cm): 6,000+</li>
+            <li>Small objects (<1 cm): Countless</li>
+        </ul>
+        <p>We are committed to addressing this growing issue and making space safer for future missions.</p>
+        <img src="https://www.sdo.esoc.esa.int/environment_report/figures/all_evo_type_count.png" alt="Space Debris Statistics" width="50%" height="50%">
+    </section>
+
+    <section id="collaboration" class="section">
+        <h2>Collaboration with Organizations</h2>
+        <p>Our aim is to approach the Central Government of India for support and collaborate with renowned organizations such as ISRO, NASA, and ESA. We seek to harness their resources and expertise in cleaning up space debris for the benefit of humanity.</p>
+    </section>
+
+    <section id="team" class="section">
+        <h2>Meet Our Team</h2>
+        <p>Get to know the dedicated individuals behind SwachaBaaa who are passionate about cleaning up space debris:</p>
+        <ul>
+            <li>Kamalesh M - Founder and Lead Engineer</li>
+            <li>Bharath G - Research and Development</li>
+            <li>Sanmuga Dharsini V - Robotics Specialist</li>
+            <li>Vishaal V - Communication and Outreach</li>
+            <li>Alfred Elliston - Technology Officer</li>
+            <li>DharunGopI  J - Assitant Technology  Officer</li> 
+        </ul>
+    </section>
+
+    <section id="contact-us" class="section">
+        <h2>Contact Us</h2>
+        <p>Learn more about our startup and get in touch with us:</p>
+        <p>Contact Numbers: 9940351424, 9677342008, 9361842297, 9894078262,9842457557</p>
+        <p>Email: <a href="mailto:yogikamal455@gmail.com">yogikamal455@gmail.com</a>, <a href="mailto:vijaymari2008@gmail.com">vijaymari2008@gmail.com</a>,  <a href="mailto:dharungopi2008@gmail.com">dharungopi2008@gmail.com</a></p>
+    </section>
+
+    <footer class="footer">
+        &copy; 2023 SwachaBaaa
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the current time and display it in the 'currentTime' paragraph
+            updateTime();
+
+            // Start the shooting star animation
+            startShootingStarAnimation();
+        });
+
+        function updateTime() {
+            const currentTimeElement = document.getElementById('currentTime');
+
+            if (currentTimeElement) {
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const seconds = now.getSeconds().toString().padStart(2, '0');
+
+                const currentTimeString = ${hours}:${minutes}:${seconds};
+                currentTimeElement.textContent = Current Time: ${currentTimeString};
+
+                // Update time every second
+                setTimeout(updateTime, 1000);
+            }
+        }
+
+        function startShootingStarAnimation() {
+            const shootingStar = document.createElement('div');
+            shootingStar.className = 'shooting-star';
+            document.body.appendChild(shootingStar);
+
+            // Set initial position
+            const initialX = window.innerWidth;
+            const initialY = Math.random() * window.innerHeight;
+            shootingStar.style.left = ${initialX}px;
+            shootingStar.style.top = ${initialY}px;
+
+            // Set random speed
+            const speed = 5 + Math.random() * 5;
+
+            // Move the shooting star
+            function moveShootingStar() {
+                const currentX = parseFloat(shootingStar.style.left);
+                const newLeft = currentX - speed;
+
+                if (newLeft < -100
